@@ -38,7 +38,7 @@ gem 'bootsnap', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
 
-# Use gem like ‘devise’ and ‘devise-jwt’ for authentication and the dispatch and revocation of JWT tokens and ‘fast_jsonapi’ gem for json response
+# Use gem like ‘devise’ and ‘devise-jwt’ for authentication and the dispatch and revocation of JWT tokens
 gem 'devise'
 gem 'devise-jwt'
 gem 'fast_jsonapi'
