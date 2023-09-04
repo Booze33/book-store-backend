@@ -22,12 +22,8 @@ module BookStoreBackend
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
-    config.session_store :cookie_store, key: '_session_data'
-    config.session_options = {
-      expire_after: 30.minutes,
-      secure: true,
-      httponly: true,
-      same_site: :strict
-    }
+    config.api_only = true
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore, key: '_coookie_name', expire_after: 30.days
   end
 end
