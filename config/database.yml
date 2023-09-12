@@ -82,6 +82,4 @@ test:
 #
 production:
   <<: *default
-  database: book_store_backend_production
-  username: book_store_backend
-  password: <%= ENV["BOOK_STORE_BACKEND_DATABASE_PASSWORD"] %>
+  url: <%= ENV["MY_APP_DATABASE_URL"] %>
